@@ -1,0 +1,30 @@
+html, body, #map-canvas {
+    height: 100%;
+    margin: 0px;
+    width: 100%;
+    padding: 0px
+}
+img{
+    /* background-color: aqua; */
+}
+.mainImageDiv{
+  transform: rotate(-20deg);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  /* background-color: aqua; */
+  /* opacity: 0.3; */
+}
+.iframTag{
+  width: 100%;
+  height: 100%;;
+  /* overflow: hidden; */
+  border:none;
+  /* z-index: 7; */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  /* background-color: rgba(3, 30, 88, 0.568); */
+  /* width: fit-content; */
+}

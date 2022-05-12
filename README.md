@@ -1,1 +1,1 @@
-# Clickable_GoogleMap
+# Clickable_areas_on_GoogleMap

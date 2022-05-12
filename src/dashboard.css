@@ -1,0 +1,459 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.larger_land_container {
+    top: 1500px !important;
+    left: 0px !important;
+    -webkit-transform: scale(0.17) rotate(90deg) !important;
+    transform: scale(0.17) rotate(90deg) !important;
+    -webkit-transform-origin: right top !important;
+    transform-origin: right top !important;
+}
+
+.map_box_overview {
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid #ebedf3;
+    border-radius: 0.85rem;
+    height: 1000px;
+    justify-content: center;
+    overflow: auto;
+    cursor: grab;
+    width: 100% !important;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+    box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+    border: 0;
+}
+
+.larger_land_container_overview {
+    width: 9000px;
+    margin: auto;
+    height: 8000px;
+    position: relative;
+    -webkit-transform: scale(0.15);
+    transform: scale(0.15);
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 1300px;
+}
+
+.holder {
+    position: absolute;
+    padding: 50px;
+    top: -638px;
+    /* transform: rotate(-20deg) !important; */
+    right: -166px;
+    width: 300px;
+    z-index: 999;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.larger_land_container {
+    width: 9000px;
+    margin: auto;
+    height: 8000px;
+    position: relative;
+    /* -webkit-transform: scale(0.15); */
+    /* transform: scale(0.15); */
+    /* -webkit-transform-origin: right top; */
+    transform-origin: right top;
+    /* zoom 0.3; */
+}
+
+.print {}
+
+.larger_land_container .section_part1 {
+    position: absolute;
+    width: 42%;
+    height: 48%;
+    left: 2%;
+    top: 3%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part1 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part1 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part1 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part1 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part1 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part2 {
+    position: absolute;
+    width: 33%;
+    height: 43%;
+    top: 41%;
+    left: 2%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part2 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part2 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part2 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part2 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part2 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part3 {
+    position: absolute;
+    width: 35%;
+    height: 43%;
+    top: 0%;
+    left: 29%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part3 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part3 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part3 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part3 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part3 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part4 {
+    position: absolute;
+    width: 35%;
+    height: 43%;
+    top: 42%;
+    left: 32%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part4 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part4 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part4 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part4 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part4 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part5 {
+    position: absolute;
+    width: 35%;
+    height: 43%;
+    top: 0%;
+    left: 60%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part5 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part5 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part5 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part5 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part5 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part6 {
+    position: absolute;
+    width: 41%;
+    height: 43%;
+    top: 40%;
+    left: 54%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part6 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part6 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part6 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part6 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part6 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part7 {
+    position: absolute;
+    width: 24%;
+    height: 28%;
+    top: 28%;
+    left: 50%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part7 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part7 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part7 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part7 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part7 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .section_part8 {
+    position: absolute;
+    width: 24%;
+    height: 28%;
+    top: 28%;
+    left: 21%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part8 [class*="group"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.larger_land_container .section_part8 [class*="group"] span.land {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    pointer-events: visible;
+}
+
+.larger_land_container .section_part8 [class*="group"] span.land.land_relative {
+    position: relative;
+}
+
+.larger_land_container .section_part8 [class*="group"] span.land.no_bg {
+    background: transparent;
+}
+
+.larger_land_container .section_part8 [class*="group"] .children_span {
+    position: absolute;
+    left: 0;
+}
+
+.larger_land_container .plots_land_lake {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border: 25px solid red; */
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.larger_land_container .plots_land_lake .lake_line_a {
+    position: absolute;
+    width: 68%;
+    /* bottom: 100%; */
+    left: 39.5%;
+    /* border: 20px solid red; */
+    top: .5%;
+    /* transform: rotate(90deg); */
+    transform-origin: left bottom;
+}
+
+.larger_land_container .plots_land_lake .lake_line_b {
+    position: absolute;
+    width: 36.6%;
+    left: 39.56%;
+    top: 0.7%;
+    height: 500px;
+    /* transform: rotate(90deg); */
+    transform-origin: left bottom;
+    /* border: 25px solid red; */
+}
+
+.larger_land_container {
+    /* height:100vh;   */
+    /* width:100%;   */
+    display: grid;
+    place-items: center;
+    /* position:fixed;   */
+    /* top:0;   */
+    /* left:0; */
+}
+
+.larger_land_container {
+    zoom: 0.38;
+    margin-right: -47px;
+    margin-top: -33px;
+}
+
+span {
+    align-items: center;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    z-index: 5;
+    background-color: rgba(0, 47, 255, 0.479);
+    overflow: visible;
+}
+
+span p {
+    display: none;
+    text-align: center;
+    padding: 0px;
+    margin-top: 40%;
+    font-size: 2px;
+    font-weight: 900;
+    /* font-size: 20px; */
+    color: black;
+    text-align: center;
+    text-shadow: 0 0 4px white, 0 0 6px white, 0 0 8px white, 0 0 10px white, 0 0 12px white, 0 0 14px white, 0 0 16px white;
+    z-index: 100;
+}
+
+.blockNumber {
+    display: none;
+    text-shadow: 0 0 8px rgb(221, 125, 15), 0 0 12px rgb(221, 125, 15), 0 0 16px rgb(221, 125, 15), 0 0 20px rgb(221, 125, 15), 0 0 34px rgb(221, 125, 15), 0 0 28px rgb(221, 125, 15), 0 0 32px rgb(221, 125, 15);
+    transform: rotate(-70deg);
+}
+
+.clicking {
+    border-style: solid;
+    border-color: rgb(255, 217, 0);
+    border-width: 4px;
+    background-color: rgba(255, 0, 0, 0.479);
+}

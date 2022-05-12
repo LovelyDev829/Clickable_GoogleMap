@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="index.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+  <script>
+    let zoomNow = 0.38;
+    let mapStyleFlag=1;
+  </script>
+
+</head>
+
+<body>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwmfaO5o1GonK46WGicOeIACJ3upx_f68">
+  </script>
+  <div id="flagButton" style="text-align: center; left: 10px; top: 10px; width: 100px; font-weight: 500; font-family: system-ui; cursor: pointer; user-select: none;
+      padding-top: 10px; padding-bottom: 10px; background-color: rgb(255, 255, 255); position: absolute; z-index: 10;" onclick="mapStyle()">Map Style</div>
+  <div id="map-canvas"></div>
+  <script>
+    var overlay;
+    //definition the properties of map
+    DebugOverlay.prototype = new google.maps.OverlayView();
+    var mapOptions = {
+        zoom: 15,
+        center: new google.maps.LatLng(21.8049345, 39.1871686),
+        mapTypeId: "satellite",
+    };
+    //create new map - this is the main background map
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); 
+    //position
+    var neBound = new google.maps.LatLng(21.8154341, 39.1948804);
+    var swBound = new google.maps.LatLng(21.7949643, 39.17763);
+    var bounds = new google.maps.LatLngBounds(swBound, neBound);
+    var lat=21.8051992, lng=39.1862552, zoom=15;
+    function initialize() {
+      //element taking (texts on each land)
+      const pElement = document.getElementById("iframeId") ?.contentWindow ?.document ?.getElementsByTagName("span").getElementsByClassName("p");
+      //when an event occures, this function will be called.
+      google.maps.event.addListener(map, 'zoom_changed', function () {
+        //element taking (texts on each land & lands & block numbers)
+        const zoomElement = document.getElementById("iframeId") ?.contentWindow ?.document ?.getElementById("plots");
+        const smallTitle = document.getElementById("iframeId") ?.contentWindow ?.document ?.getElementById("plots").getElementsByTagName('p');
+        const blockElements = document.getElementById("iframeId") ?.contentWindow ?.document ?.getElementsByClassName("blockNumber");
+        for(let elemm of blockElements){
+            elemm.style.display="none";  //hidden every block numbers
+          }
+          //get position of google map
+        lat  = map.getCenter().lat();
+        lng  = map.getCenter().lng();
+        zoom = map.getZoom();
+        // changing styles according to the value of zoom
+        if (zoom >= 22) {
+          zoomElement.style.zoom = 50.00;
+          zoomElement.style.marginTop = "-056px";
+          zoomElement.style.marginRight = "-54px"
+          for(item of smallTitle){
+            item.style.display ="block";
+            item.style.fontSize = "40px"
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none"
+          }
+        } else if (zoom >= 21) {
+          zoomElement.style.zoom = 24.80;
+          zoomElement.style.marginTop = "-056px";
+          zoomElement.style.marginRight = "-54px"
+          for(item of smallTitle){
+            item.style.display ="block";
+            item.style.fontSize = "7px"
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none"
+          }
+        } else if (zoom >= 20) {
+          zoomElement.style.zoom = 12.30;
+          zoomElement.style.marginTop = "-042px";
+          zoomElement.style.marginRight = "-51px"
+          for(item of smallTitle){
+            item.style.display ="block";
+            item.style.fontSize = "10px"
+            // console.log(item.style.fontSize);
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none"
+          }
+        } else if (zoom >= 19) {
+          zoomElement.style.zoom = 6.150;
+          zoomElement.style.marginTop = "-043px";
+          zoomElement.style.marginRight = "-54px"
+          for(item of smallTitle){
+            item.style.display ="block";
+            item.style.fontSize = "15px"
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none"
+          }
+        } else if (zoom >= 18) {
+          zoomElement.style.zoom = 3.100;
+          zoomElement.style.marginTop = "-049px";
+          zoomElement.style.marginRight = "-51px"
+          for(item of smallTitle){
+            item.style.display ="block";
+            item.style.fontSize = "20px"
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none"
+          }
+        } else if (zoom >= 17) {
+          zoomElement.style.zoom = 1.520;
+          zoomElement.style.marginTop = "-033px";
+          zoomElement.style.marginRight = "-50px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="block";
+            elemm.style.fontSize="100px";
+          }
+        } else if (zoom >= 16) {
+          zoomElement.style.zoom = 0.760;
+          zoomElement.style.marginTop = "-033px";
+          zoomElement.style.marginRight = "-44px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="block";
+            elemm.style.fontSize="100px";
+          }
+
+        } else if (zoom >= 15) {
+          zoomElement.style.zoom = 0.380;
+          zoomElement.style.marginTop = "-031px";
+          zoomElement.style.marginRight = "-44px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none";
+          }
+        } else if (zoom >= 14) {
+          zoomElement.style.zoom = 0.190;
+          zoomElement.style.marginTop = "-037px";
+          zoomElement.style.marginRight = "-44px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none";
+          }
+        } else if (zoom >= 13) {
+          zoomElement.style.zoom = 0.093;
+          zoomElement.style.marginTop = "-005px";
+          zoomElement.style.marginRight = "-44px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none";
+          }
+        } else if (zoom >= 12) {
+          zoomElement.style.zoom = 0.046;
+          zoomElement.style.marginTop = "-018px";
+          zoomElement.style.marginRight = "-78px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none";
+          }
+        } else if (zoom >= 11) {
+          zoomElement.style.zoom = 0.020;
+          zoomElement.style.marginTop = "-019px";
+          zoomElement.style.marginRight = "-23px"
+          for(item of smallTitle){
+            item.style.display ="none";
+          }
+          for(let elemm of blockElements){
+            elemm.style.display="none";
+          }
+        }
+
+      });
+      var srcImage = '001.png';
+      overlay = new DebugOverlay(bounds, srcImage, map);
+    }
+
+    function DebugOverlay(bounds, image, map) {
+      this.bounds_ = bounds;
+      this.image_ = image;
+      this.map_ = map;
+      this.div_ = null;
+      this.setMap(map);
+    }
+    //this is main function which has got many functionalities
+    DebugOverlay.prototype.onAdd = function () {
+      var div = document.createElement('div');
+      div.className = "mainImageDiv";
+      div.id = "divID";
+      //the html file is shown through iFrame tag.
+      var iframE = document.createElement('iframe');
+      
+      iframE.className = "iframTag";
+      iframE.id = "iframeId";
+      iframE.src = "./dashboard.html";
+      iframE.scrolling = "no";
+      
+      div.appendChild(iframE);
+      this.div_ = div;
+      var panes = this.getPanes();
+      panes.overlayLayer.appendChild(div);
+      const node = div.parentElement.parentElement
+      node.style.zIndex = 3;
+      //this is the very front layer of google map, and I position it at the back of iframe.
+      const veryFront = div.parentElement.parentElement.nextElementSibling;
+      veryFront.style.backgroundColor = "rgba(0, 255, 55, 0.156)";
+      veryFront.style.pointerEvents = "all";
+      veryFront.style.cursor = "pointer";
+      veryFront.click = "eventhandler";
+      veryFront.style.zIndex=0;
+      //when ifram is loaded,
+      iframE.onload = function() {
+        var clickElement = iframE.contentWindow?.document ?.getElementById('plots');
+        elem=clickElement;
+        let downFlag=0;   //flag which shows mouse is down of not
+        let dragFlag=0;   //flag which shows mouse is on drag of not
+        elem.style.userSelect="none";   //selection(blue color) disabled
+        elem.addEventListener('mousedown', function(){
+          downFlag=1;
+          dragFlag=0;
+        })
+        elem.addEventListener('mouseup', function(){
+          if(dragFlag===0){
+            // console.log("clicking-plots");
+          }
+          dragFlag=0;
+          downFlag=0;
+        })
+        elem.addEventListener('mousemove', function(e){
+            if(downFlag===1){
+              dragFlag=1;
+              // get position of map
+              let latt=map.getCenter().lat();
+              let lngg=map.getCenter().lng();
+              //calculate  latlng-value frrom pixcel
+              var distX = (e.movementX)/23000;
+              var distY = (e.movementY)/23000;
+              // console.log("zoom->", map.getZoom()); ///////////////////////////////////////////
+              distX *= Math.pow(2, (15-map.getZoom()));
+              distY *= Math.pow(2, (15-map.getZoom()));
+              latt += distY;  
+              lngg -= distX;
+              let newCenter = new google.maps.LatLng(latt, lngg);
+              //recenter the map so that it looks grabbed.
+              map.setCenter(newCenter);
+            }
+        });
+        elem.addEventListener('wheel', function(e){
+          //scrolling changes the zoo-value
+            if(e.deltaY>0){
+              map.setZoom(map.getZoom() -1);
+            }
+            else if(e.deltaY<0){
+              map.setZoom(map.getZoom() +1);
+            }
+        });
+        elem.addEventListener('mouseleave', function(e){
+            dragFlag=0;
+            downFlag=0;
+          });
+        
+        ///////////////////////////////////
+        var clickSpan = iframE.contentWindow?.document ?.getElementsByTagName('span');
+        for(let elemSpan of clickSpan){
+          elemSpan.addEventListener('click', function(){
+            //when you click any span(land) shows the land number on console.log
+            console.log("Span clicked is below--------------", elemSpan.firstChild.innerHTML)
+            //turn once clicked land number color to red
+            elemSpan.firstChild.style.color="red";
+          })
+        }
+        
+      }
+    };
+    DebugOverlay.prototype.draw = function () {
+      var overlayProjection = this.getProjection();
+      var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+      var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+      var div = this.div_;
+      div.style.left = sw.x + 'px';
+      div.style.top = ne.y + 'px';
+      div.style.width = (ne.x - sw.x) + 'px';
+      div.style.height = (sw.y - ne.y) + 'px';
+    };
+    DebugOverlay.prototype.updateBounds = function (bounds) {
+      this.bounds_ = bounds;
+      this.draw();
+    };
+    DebugOverlay.prototype.onRemove = function () {
+      this.div_.parentNode.removeChild(this.div_);
+      this.div_ = null;
+    };
+    initialize();
+    //turning map 4 style one to the other.
+    function mapStyle(){
+      // mapOptions.mapTypeId=""
+      if(mapStyleFlag==1){
+        map.setMapTypeId("hybrid");
+        mapStyleFlag=2;
+      }
+      else if(mapStyleFlag==2){
+        map.setMapTypeId("terrain");
+        mapStyleFlag=3;
+      }
+      else if(mapStyleFlag==3){
+        map.setMapTypeId("roadmap");
+        mapStyleFlag=4;
+      }
+      else if(mapStyleFlag==4){
+        map.setMapTypeId("satellite");
+        mapStyleFlag=1;
+      }
+    }
+  </script>
+</body>
+
+</html>
